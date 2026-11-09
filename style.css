@@ -1,0 +1,540 @@
+/* PERUSASETUKSET */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: #fffaf0;
+    color: #354638;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+}
+
+
+/* YLÄVALIKKO */
+
+.header {
+    background: #ffffff;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 3px 15px #0000000c;
+}
+
+.logo {
+    color: #477b55;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+nav button {
+    background: #edf5e9;
+    color: #477b55;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+nav button:hover {
+    background: #d8ebd2;
+}
+
+
+/* SIVUJEN PERUSASETUKSET */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px;
+}
+
+.page {
+    display: block;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ETUSIVU */
+
+.hero {
+    background: #e5f2df;
+    border-radius: 30px;
+    padding: 55px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.small-title {
+    color: #729b69;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.15;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #5b9661;
+    display: block;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 550px;
+}
+
+.hero-picture {
+    background: #fff4d6;
+    border-radius: 50%;
+    width: 270px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.big-animal {
+    font-size: 115px;
+}
+
+.little-animals {
+    font-size: 28px;
+}
+
+
+/* PAINIKKEET */
+
+.main-button {
+    background: #609568;
+    color: white;
+    padding: 17px 28px;
+    border-radius: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.main-button:hover {
+    background: #477b55;
+}
+
+.back-button {
+    background: #e5f2df;
+    color: #477b55;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+
+/* ETUSIVUN ESITTELY */
+
+.welcome-section {
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.welcome-section h2 {
+    font-size: 30px;
+    color: #477b55;
+}
+
+.welcome-section p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* ETUSIVUN KORTIT */
+
+.home-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.home-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 5px 15px #0000000b;
+    transition: 0.2s;
+}
+
+.home-card:hover {
+    transform: translateY(-5px);
+}
+
+.home-card span {
+    font-size: 55px;
+}
+
+.home-card h3 {
+    color: #477b55;
+    font-size: 21px;
+}
+
+.home-card p {
+    font-size: 16px;
+}
+
+
+/* OTSIKOT */
+
+.section-heading {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.section-heading h1 {
+    font-size: 42px;
+    color: #477b55;
+}
+
+.section-heading p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* KERÄILYTÄHDET */
+
+.progress-box {
+    background: #fff1c9;
+    border-radius: 20px;
+    padding: 22px;
+    text-align: center;
+    margin: 20px 0 30px;
+}
+
+.progress-box h3 {
+    color: #8a682c;
+}
+
+#star-display {
+    font-size: 35px;
+    letter-spacing: 8px;
+    margin: 12px;
+}
+
+#progress-text {
+    font-size: 17px;
+}
+
+
+/* MAANOSAKORTIT */
+
+.continent-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.continent-card {
+    border-radius: 22px;
+    padding: 25px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.2s;
+    border: 4px solid transparent;
+}
+
+.continent-card:hover {
+    transform: translateY(-5px);
+    border-color: white;
+}
+
+.continent-card h2 {
+    font-size: 26px;
+}
+
+.continent-card p {
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.continent-card .continent-icon {
+    font-size: 65px;
+}
+
+.continent-card .visited {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* MAANOSAN TIEDOT */
+
+.continent-intro {
+    padding: 35px;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.continent-intro h1 {
+    font-size: 40px;
+}
+
+.continent-intro p {
+    font-size: 19px;
+    line-height: 1.7;
+    max-width: 750px;
+    margin: auto;
+}
+
+.continent-fact {
+    background: #fff1c9;
+    padding: 20px;
+    border-radius: 18px;
+    margin: 20px 0 30px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.animal-card {
+    background: white;
+    border-radius: 22px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px #0000000b;
+}
+
+.animal-emoji {
+    font-size: 85px;
+    margin: 10px;
+}
+
+.animal-card h3 {
+    color: #477b55;
+    font-size: 25px;
+}
+
+.animal-card p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.animal-detail {
+    background: #edf5e9;
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 12px;
+    text-align: left;
+}
+
+
+/* ÄÄNIVISA */
+
+.quiz-box {
+    background: white;
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 35px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 5px 20px #0000000b;
+}
+
+.quiz-animal {
+    font-size: 100px;
+    margin-bottom: 10px;
+}
+
+.sound-button {
+    background: #f9d77e;
+    padding: 20px 35px;
+    border-radius: 15px;
+    font-size: 19px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+#quiz-answers {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+#quiz-answers button {
+    background: #e5f2df;
+    color: #354638;
+    border-radius: 15px;
+    padding: 18px;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+#quiz-answers button:hover {
+    background: #cfe7c8;
+}
+
+#quiz-feedback {
+    font-size: 21px;
+    font-weight: bold;
+    min-height: 35px;
+}
+
+.quiz-score {
+    background: #fff1c9;
+    border-radius: 18px;
+    padding: 15px;
+    text-align: center;
+    max-width: 300px;
+    margin: 25px auto;
+}
+
+
+/* KERÄILYKOKOELMA */
+
+.collection-item {
+    background: white;
+    padding: 20px;
+    margin: 12px 0;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 19px;
+}
+
+.collection-finish {
+    background: #e5f2df;
+    border-radius: 20px;
+    text-align: center;
+    padding: 30px;
+    margin-top: 25px;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+
+/* ALATUNNISTE */
+
+footer {
+    background: #477b55;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 50px;
+}
+
+footer h2 {
+    font-size: 23px;
+}
+
+.footer-small {
+    opacity: 0.8;
+    font-size: 13px;
+}
+
+
+/* TABLETIT JA PUHELIMET */
+
+@media (max-width: 700px) {
+
+    .header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav button {
+        padding: 12px;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    .hero {
+        padding: 30px 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-picture {
+        width: 210px;
+        height: 210px;
+    }
+
+    .big-animal {
+        font-size: 85px;
+    }
+
+    .home-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .continent-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .animal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h1 {
+        font-size: 32px;
+    }
+
+    .continent-intro h1 {
+        font-size: 30px;
+    }
+
+    .quiz-box {
+        padding: 20px;
+    }
+
+}

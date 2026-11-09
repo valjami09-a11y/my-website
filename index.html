@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Tutustu maailman eläimiin ja maanosiin hauskalla tavalla.">
+
+    <title>Eläinten maailma – Tutkimusretki maapallolla</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- YLÄVALIKKO -->
+
+    <header class="header">
+
+        <div class="logo">
+            🌍 ELÄINTEN MAAILMA
+        </div>
+
+        <nav>
+            <button onclick="showHome()">Etusivu</button>
+            <button onclick="showMap()">Maanosat</button>
+            <button onclick="showQuiz()">Eläinvisa</button>
+            <button onclick="showCollection()">Omat tähdet</button>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- ETUSIVU -->
+
+        <section id="home" class="page">
+
+            <div class="hero">
+
+                <div class="hero-text">
+
+                    <p class="small-title">
+                        TERVETULOA ELÄINTEN MAAILMAAN
+                    </p>
+
+                    <h1>
+                        Lähdetään tutkimaan
+                        <span>maailman eläimiä!</span>
+                    </h1>
+
+                    <p>
+                        Maailmassa on paljon erilaisia eläimiä.
+                        Osa elää kuumissa paikoissa, osa metsissä
+                        ja jotkut viihtyvät kylmässä lumessa.
+                    </p>
+
+                    <p>
+                        Tällä sivulla pääset tutustumaan niihin
+                        ja katsomaan, missä päin maailmaa ne asuvat.
+                    </p>
+
+                    <button class="main-button" onclick="showMap()">
+                        Lähde tutkimaan →
+                    </button>
+
+                </div>
+
+
+                <div class="hero-picture">
+
+                    <div class="big-animal">🦁</div>
+
+                    <div class="little-animals">
+                        🐘 🦒 🦓 🐒
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ESITTELY -->
+
+            <div class="welcome-section">
+
+                <h2>Maailmassa riittää nähtävää</h2>
+
+                <p>
+                    Tiedätkö, missä pingviinit asuvat?
+                    Entä missä norsut ja kengurut elävät?
+                </p>
+
+                <p>
+                    Jokaisella maanosalla on omat eläimensä.
+                    Tutkitaan yhdessä, mitä kaikkea maailmasta löytyy!
+                </p>
+
+            </div>
+
+
+            <!-- VALIKKOKORTIT -->
+
+            <div class="home-cards">
+
+                <div class="home-card" onclick="showMap()">
+
+                    <span>🌎</span>
+
+                    <h3>Maanosat</h3>
+
+                    <p>
+                        Tutki maailman seitsemää maanosaa
+                        ja löydä niissä eläviä eläimiä.
+                    </p>
+
+                </div>
+
+
+                <div class="home-card" onclick="showQuiz()">
+
+                    <span>🐾</span>
+
+                    <h3>Eläinvisa</h3>
+
+                    <p>
+                        Kuuntele erilaisia eläinten ääniä
+                        ja arvaa, mikä eläin ääntelee.
+                    </p>
+
+                </div>
+
+
+                <div class="home-card" onclick="showCollection()">
+
+                    <span>⭐</span>
+
+                    <h3>Omat tähdet</h3>
+
+                    <p>
+                        Saat tähden aina, kun olet
+                        tutkinut uuden maanosan.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- MAANOSAT -->
+
+        <section id="map" class="page hidden">
+
+            <div class="section-heading">
+
+                <p class="small-title">
+                    TUTKIMUSRETKI
+                </p>
+
+                <h1>Minne matkustetaan seuraavaksi?</h1>
+
+                <p>
+                    Valitse kartalta maanosa ja katso,
+                    millaisia eläimiä siellä asuu.
+                </p>
+
+            </div>
+
+
+            <!-- Eteneminen -->
+
+            <div class="progress-box">
+
+                <h3>Sinun keräämäsi tähdet</h3>
+
+                <div id="star-display"></div>
+
+                <p id="progress-text">
+                    Olet tutkinut 0 / 7 maanosaa.
+                </p>
+
+            </div>
+
+
+            <!-- Maanosat lisätään JavaScriptillä -->
+
+            <div id="continent-list" class="continent-grid"></div>
+
+        </section>
+
+
+
+        <!-- YKSITTÄINEN MAANOSA -->
+
+        <section id="continent-page" class="page hidden">
+
+            <button class="back-button" onclick="showMap()">
+                ← Takaisin
+            </button>
+
+            <div id="continent-information"></div>
+
+        </section>
+
+
+
+        <!-- ELÄINVISA -->
+
+        <section id="quiz" class="page hidden">
+
+            <div class="section-heading">
+
+                <p class="small-title">
+                    KUUNTELE TARKASTI
+                </p>
+
+                <h1>Arvaa eläin äänen perusteella!</h1>
+
+                <p>
+                    Jokaisella eläimellä on omanlaisensa ääni.
+                    Kuuntele ja kokeile, tunnistatko sen.
+                </p>
+
+            </div>
+
+
+            <div class="quiz-box">
+
+                <div class="quiz-animal">
+                    🐾
+                </div>
+
+                <h2>Mikä eläin pitää tätä ääntä?</h2>
+
+                <p>
+                    Paina kuuntelupainiketta ja kuuntele tarkasti.
+                </p>
+
+
+                <button class="sound-button" onclick="playQuizSound()">
+                    🔊 Kuuntele ääni
+                </button>
+
+
+                <div id="quiz-answers"></div>
+
+                <p id="quiz-feedback"></p>
+
+
+                <button
+                    id="next-question"
+                    class="main-button hidden"
+                    onclick="newQuestion()">
+
+                    Seuraava eläin →
+
+                </button>
+
+            </div>
+
+
+            <div class="quiz-score">
+
+                <h3>Oikeat vastaukset</h3>
+
+                <p id="score">0</p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- OMAT TÄHDET -->
+
+        <section id="collection" class="page hidden">
+
+            <div class="section-heading">
+
+                <p class="small-title">
+                    SINUN MATKASI
+                </p>
+
+                <h1>Kuinka monta tähteä olet saanut?</h1>
+
+                <p>
+                    Jokainen tutkittu maanosa tuo sinulle
+                    uuden tähden. Saatko kerättyä kaikki?
+                </p>
+
+            </div>
+
+
+            <div id="collection-list"></div>
+
+
+            <div class="collection-finish" id="finish-message">
+
+                Tutki kaikki seitsemän maanosaa
+                ja kerää koko tähtikokoelma!
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ALATUNNISTE -->
+
+    <footer>
+
+        <h2>🌍 Eläinten maailma</h2>
+
+        <p>
+            Seitsemän maanosaa ja paljon uusia eläimiä löydettävänä.
+        </p>
+
+        <p class="footer-small">
+            Pieni tutkimusmatka maailman ympäri.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
